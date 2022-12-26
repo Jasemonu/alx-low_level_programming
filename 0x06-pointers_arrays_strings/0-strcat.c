@@ -14,15 +14,9 @@ char *_strcat(char *dest, char *src)
 	char src[];
 	char *ptr;
 
-	for (i = 0; dest[i] < != '\0'; i++)
+	for (i = 0; i < '\0'; i++)
 	{
-		_putchar(dest[i]);
-
-		for (j = 0; src[i] < != '\0'; j++)
-		{
-			_putchar(src[j]);
-		}
-		ptr = (dest[i] + src[j])
+		ptr = (dest['\0' + i] = src[i]);
 			_putchar(ptr);
 	}
 	return (0);
