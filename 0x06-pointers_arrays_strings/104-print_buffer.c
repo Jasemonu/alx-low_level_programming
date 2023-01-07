@@ -20,6 +20,8 @@ void print_line(char *c, int s, int l)
 			printf("%02x", c[l * 10 + j]);
 		else
 			printf("  ");
+		if (j % 2)
+			putchar(' ');
 	}
 	for (k = 0; k <= s; k++)
 	{
