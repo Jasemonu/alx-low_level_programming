@@ -11,11 +11,12 @@ fmt:	db "%s", 10, 0		; The printf format, "\n",'0'
 main:				; the program label for the entry point
 	push	rbp		; set up stack frame, must be alligned
 
-	mov	rdi,fmt
-	mov	rsi,msg
-	mov	rax,0		; or can be  xor  rax,rax
-	call	printf		; Call C function
+		mov	rdi,fmt
+		mov	rsi,msg
+		mov	rax,0		; or can be  xor  rax,rax
+		call	printf		; Call C function
 
-	pop	rbp		; restore stack
-	mov	rax,0		; normal, no error, return value
-	ret			; return
+		pop	rbp		; restore stack
+
+		mov	rax,0		; normal, no error, return value
+		ret			; return
